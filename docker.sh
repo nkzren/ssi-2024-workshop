@@ -1,5 +1,5 @@
 #!/bin/bash
-docker run --rm -d --name workshop-ssi \
+docker run --rm -d --name workshop-ssi -p 5432:5432 \
 				-e POSTGRES_PASSWORD=banana \
 				-e PGDATA=/var/lib/postgresql/data/pgdata \
 				-v $PWD/dados:/var/lib/postgresql/data \
